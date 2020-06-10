@@ -48,7 +48,7 @@
                 android:visibility="gone"
                 tools:text="Franz Ferdinand - Tonight"/>
 
-            <com.simplecity.amp_library.ui.views.TextViewDrawableSize
+            <edu.usf.sas.pal.muser.ui.views.TextViewDrawableSize
                 android:id="@+id/albumCount"
                 style="?attr/secondaryTextViewStyle"
                 android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                 app:compoundDrawableHeight="10sp"
                 app:compoundDrawableWidth="10sp"/>
 
-            <com.simplecity.amp_library.ui.views.TextViewDrawableSize
+            <edu.usf.sas.pal.muser.ui.views.TextViewDrawableSize
                 android:id="@+id/trackCount"
                 style="?attr/secondaryTextViewStyle"
                 android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.simplecity.amp_library.ui.views.OverflowButton
+    <edu.usf.sas.pal.muser.ui.views.OverflowButton
         android:id="@+id/btn_overflow"
         android:layout_width="40dp"
         android:layout_height="48dp"

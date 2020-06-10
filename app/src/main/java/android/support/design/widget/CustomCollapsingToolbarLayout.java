@@ -35,7 +35,7 @@ import android.view.ViewParent;
 import android.view.animation.Interpolator;
 import android.widget.FrameLayout;
 
-import com.simplecity.amp_library.R;
+import edu.usf.sas.pal.muser.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

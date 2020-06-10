@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.simplecity.amp_library.ui.views.ThemedStatusBarView
+    <edu.usf.sas.pal.muser.ui.views.ThemedStatusBarView
         android:id="@+id/statusBarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:tag=":aesthetic_ignore"
-        tools:context=".ui.screens.main.MainActivity">
+        tools:context="edu.usf.sas.pal.muser.ui.screens.main.MainActivity">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/app_bar"
@@ -34,7 +34,7 @@
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:titleEnabled="false">
 
-                <com.simplecity.amp_library.ui.views.BreadcrumbView
+                <edu.usf.sas.pal.muser.ui.views.BreadcrumbView
                     android:id="@+id/breadcrumb_view"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"

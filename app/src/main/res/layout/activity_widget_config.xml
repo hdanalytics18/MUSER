@@ -125,7 +125,7 @@
                 android:textColor="?android:textColorPrimaryInverse"
                 android:textSize="18sp"/>
 
-            <com.simplecity.amp_library.ui.views.SizableSeekBar
+            <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                 android:id="@+id/seekBar1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

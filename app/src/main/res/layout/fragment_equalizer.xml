@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.simplecity.amp_library.ui.views.ThemedStatusBarView
+    <edu.usf.sas.pal.muser.ui.views.ThemedStatusBarView
         android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -67,7 +67,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/EqBand0TopTextView">
 
-                        <com.simplecity.amp_library.ui.views.SizableSeekBar
+                        <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                             android:id="@+id/EqBand0SeekBar"
                             style="@style/SeekBar"
                             android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/EqBand1TopTextView">
 
-                        <com.simplecity.amp_library.ui.views.SizableSeekBar
+                        <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                             android:id="@+id/EqBand1SeekBar"
                             style="@style/SeekBar"
                             android:layout_width="match_parent"
@@ -162,7 +162,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/EqBand2TopTextView">
 
-                        <com.simplecity.amp_library.ui.views.SizableSeekBar
+                        <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                             android:id="@+id/EqBand2SeekBar"
                             style="@style/SeekBar"
                             android:layout_width="match_parent"
@@ -211,7 +211,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/EqBand3TopTextView">
 
-                        <com.simplecity.amp_library.ui.views.SizableSeekBar
+                        <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                             android:id="@+id/EqBand3SeekBar"
                             style="@style/SeekBar"
                             android:layout_width="match_parent"
@@ -258,7 +258,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/EqBand4TopTextView">
 
-                        <com.simplecity.amp_library.ui.views.SizableSeekBar
+                        <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                             android:id="@+id/EqBand4SeekBar"
                             style="@style/SeekBar"
                             android:layout_width="match_parent"
@@ -305,7 +305,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/EqBand5TopTextView">
 
-                        <com.simplecity.amp_library.ui.views.SizableSeekBar
+                        <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                             android:id="@+id/EqBand5SeekBar"
                             style="@style/SeekBar"
                             android:layout_width="match_parent"
@@ -360,7 +360,7 @@
                 android:text="@string/virtualizer_strength"
                 android:textSize="14sp"/>
 
-            <com.simplecity.amp_library.ui.views.SizableSeekBar
+            <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                 android:id="@+id/virtualizer_strength"
                 style="@style/SeekBar"
                 android:layout_width="0dp"
@@ -383,7 +383,7 @@
                 android:text="@string/bass_boost_strength"
                 android:textSize="14sp"/>
 
-            <com.simplecity.amp_library.ui.views.SizableSeekBar
+            <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
                 android:id="@+id/bb_strength"
                 style="@style/SeekBar"
                 android:layout_width="0dp"

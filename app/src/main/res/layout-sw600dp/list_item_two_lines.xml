@@ -33,7 +33,7 @@
         android:textColor="?android:textColorSecondary"
         android:textSize="14sp"/>
 
-    <com.simplecity.amp_library.ui.views.PlayCountView
+    <edu.usf.sas.pal.muser.ui.views.PlayCountView
         android:id="@+id/play_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
         android:lines="1"
         android:textSize="12sp"/>
 
-    <com.simplecity.amp_library.ui.views.OverflowButton
+    <edu.usf.sas.pal.muser.ui.views.OverflowButton
         android:id="@+id/btn_overflow"
         android:layout_width="40dp"
         android:layout_height="48dp"

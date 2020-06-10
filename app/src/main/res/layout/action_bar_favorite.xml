@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.simplecity.amp_library.ui.views.FavoriteActionBarView
+<edu.usf.sas.pal.muser.ui.views.FavoriteActionBarView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="?attr/actionButtonStyle"
@@ -15,4 +15,4 @@
         android:src="@drawable/ic_favorite_border_24dp"
         tools:tint="@color/colorAccent"/>
 
-</com.simplecity.amp_library.ui.views.FavoriteActionBarView>
+</edu.usf.sas.pal.muser.ui.views.FavoriteActionBarView>

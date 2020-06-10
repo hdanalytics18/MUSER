@@ -33,7 +33,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.simplecity.amp_library.ui.views.RepeatingImageButton
+            <edu.usf.sas.pal.muser.ui.views.RepeatingImageButton
                 android:id="@+id/prevButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
@@ -49,7 +49,7 @@
                 app:layout_constraintTop_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.simplecity.amp_library.ui.views.RepeatingImageButton
+            <edu.usf.sas.pal.muser.ui.views.RepeatingImageButton
                 android:id="@+id/nextButton"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
@@ -78,7 +78,7 @@
                 app:layout_constraintTop_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.simplecity.amp_library.ui.views.PlayPauseView
+            <edu.usf.sas.pal.muser.ui.views.PlayPauseView
                 android:id="@+id/playPauseView"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
@@ -161,7 +161,7 @@
 
     </LinearLayout>
 
-    <com.simplecity.amp_library.ui.views.SizableSeekBar
+    <edu.usf.sas.pal.muser.ui.views.SizableSeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

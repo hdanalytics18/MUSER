@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.simplecity.amp_library.ui.views.SquareImageView
+        <edu.usf.sas.pal.muser.ui.views.SquareImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

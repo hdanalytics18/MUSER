@@ -1,0 +1,115 @@
+package edu.usf.sas.pal.muser.playback
+
+import android.bluetooth.BluetoothA2dp
+import android.bluetooth.BluetoothHeadset
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.Bundle
+
+class BluetoothManager(
+        private val playbackManager: edu.usf.sas.pal.muser.playback.PlaybackManager,
+        private val analyticsManager: edu.usf.sas.pal.muser.utils.AnalyticsManager,
+        private val musicServiceCallbacks: edu.usf.sas.pal.muser.playback.MusicService.Callbacks,
+        private val settingsManager: edu.usf.sas.pal.muser.utils.SettingsManager
+) {
+
+    private var bluetoothReceiver: BroadcastReceiver? = null
+
+    private var a2dpReceiver: BroadcastReceiver? = null
+
+    fun registerBluetoothReceiver(context: Context) {
+
+        val filter = IntentFilter()
+        filter.addAction(BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED)
+        filter.addAction(BluetoothHeadset.ACTION_AUDIO_STATE_CHANGED)
+
+        bluetoothReceiver = object : BroadcastReceiver() {
+            override fun onReceive(context: Context, intent: Intent) {
+
+                val action = intent.action
+                if (action != null) {
+                    val extras = intent.extras
+                    if (settingsManager.bluetoothPauseDisconnect) {
+                        when (action) {
+                            BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED -> if (extras != null) {
+                                val state = extras.getInt(BluetoothA2dp.EXTRA_STATE)
+                                val previousState = extras.getInt(BluetoothA2dp.EXTRA_PREVIOUS_STATE)
+                                if ((state == BluetoothA2dp.STATE_DISCONNECTED || state == BluetoothA2dp.STATE_DISCONNECTING) && previousState == BluetoothA2dp.STATE_CONNECTED) {
+                                    analyticsManager.dropBreadcrumb(TAG, "ACTION_AUDIO_STATE_CHANGED.. pausing. State: $state")
+                                    playbackManager.pause(false)
+                                }
+                            }
+                            BluetoothHeadset.ACTION_AUDIO_STATE_CHANGED -> if (extras != null) {
+                                val state = extras.getInt(BluetoothHeadset.EXTRA_STATE)
+                                val previousState = extras.getInt(BluetoothHeadset.EXTRA_PREVIOUS_STATE)
+                                if (state == BluetoothHeadset.STATE_AUDIO_DISCONNECTED && previousState == BluetoothHeadset.STATE_AUDIO_CONNECTED) {
+                                    analyticsManager.dropBreadcrumb(TAG, "ACTION_AUDIO_STATE_CHANGED.. pausing. State: $state")
+                                    playbackManager.pause(false)
+                                }
+                            }
+                        }
+                    }
+
+                    if (settingsManager.bluetoothResumeConnect) {
+                        when (action) {
+                            BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED -> if (extras != null) {
+                                val state = extras.getInt(BluetoothA2dp.EXTRA_STATE)
+                                if (state == BluetoothA2dp.STATE_CONNECTED) {
+                                    playbackManager.play()
+                                }
+                            }
+                            BluetoothHeadset.ACTION_AUDIO_STATE_CHANGED -> if (extras != null) {
+                                val state = extras.getInt(BluetoothHeadset.EXTRA_STATE)
+                                if (state == BluetoothHeadset.STATE_AUDIO_CONNECTED) {
+                                    playbackManager.play()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        context.registerReceiver(bluetoothReceiver, filter)
+    }
+
+    fun unregisterBluetoothReceiver(context: Context) {
+        context.unregisterReceiver(bluetoothReceiver)
+    }
+
+    fun registerA2dpServiceListener(context: Context) {
+        a2dpReceiver = object : BroadcastReceiver() {
+            override fun onReceive(context: Context, intent: Intent) {
+                val action = intent.action
+                if (action != null && action == edu.usf.sas.pal.muser.playback.constants.ExternalIntents.PLAY_STATUS_REQUEST) {
+                    musicServiceCallbacks.notifyChange(edu.usf.sas.pal.muser.playback.constants.ExternalIntents.PLAY_STATUS_RESPONSE)
+                }
+            }
+        }
+        val intentFilter = IntentFilter()
+        intentFilter.addAction(edu.usf.sas.pal.muser.playback.constants.ExternalIntents.PLAY_STATUS_REQUEST)
+        context.registerReceiver(a2dpReceiver, intentFilter)
+    }
+
+    fun unregisterA2dpServiceListener(context: Context) {
+        context.unregisterReceiver(a2dpReceiver)
+    }
+
+    fun sendPlayStateChangedIntent(context: Context, extras: Bundle) {
+        val intent = Intent(edu.usf.sas.pal.muser.playback.constants.ExternalIntents.AVRCP_PLAY_STATE_CHANGED)
+        intent.putExtras(extras)
+        context.sendBroadcast(intent)
+    }
+
+    fun sendMetaChangedIntent(context: Context, extras: Bundle) {
+        val intent = Intent(edu.usf.sas.pal.muser.playback.constants.ExternalIntents.AVRCP_META_CHANGED)
+        intent.putExtras(extras)
+        context.sendBroadcast(intent)
+    }
+
+    companion object {
+        const val TAG = "BluetoothManager"
+    }
+}

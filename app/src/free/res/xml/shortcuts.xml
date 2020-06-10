@@ -14,8 +14,8 @@
         <!--app:shortcutLongLabel="@string/shortcut_playlist_long_label"-->
         <!--app:shortcutShortLabel="@string/shortcut_playlist_short_label">-->
         <!--<intent-->
-            <!--android:action="com.simplecity.amp_library.shortcuts.PLAYLIST"-->
-            <!--android:targetClass="com.simplecity.amp_library.ui.screens.shortcut.ShortcutTrampolineActivity"-->
+            <!--android:action="edu.usf.sas.pal.muser.shortcuts.PLAYLIST"-->
+            <!--android:targetClass="edu.usf.sas.pal.muser.ui.screens.shortcut.ShortcutTrampolineActivity"-->
             <!--android:targetPackage="another.music.player"/>-->
     <!--</shortcut>-->
 
@@ -31,8 +31,8 @@
         app:shortcutLongLabel="@string/shortcut_shuffle_long_label"
         app:shortcutShortLabel="@string/shortcut_shuffle_short_label">
         <intent
-            android:action="com.simplecity.amp_library.shortcuts.SHUFFLE"
-            android:targetClass="com.simplecity.amp_library.ui.screens.shortcut.ShortcutTrampolineActivity"
+            android:action="edu.usf.sas.pal.muser.shortcuts.SHUFFLE"
+            android:targetClass="edu.usf.sas.pal.muser.ui.screens.shortcut.ShortcutTrampolineActivity"
             android:targetPackage="another.music.player"/>
     </shortcut>
 
@@ -48,8 +48,8 @@
         app:shortcutLongLabel="@string/shortcut_play_long_label"
         app:shortcutShortLabel="@string/shortcut_play_short_label">
         <intent
-            android:action="com.simplecity.amp_library.shortcuts.PLAY"
-            android:targetClass="com.simplecity.amp_library.ui.screens.shortcut.ShortcutTrampolineActivity"
+            android:action="edu.usf.sas.pal.muser.shortcuts.PLAY"
+            android:targetClass="edu.usf.sas.pal.muser.ui.screens.shortcut.ShortcutTrampolineActivity"
             android:targetPackage="another.music.player"/>
     </shortcut>
 </shortcuts>

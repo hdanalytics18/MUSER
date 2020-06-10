@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.simplecity.amp_library.ui.views.ThemedStatusBarView
+    <edu.usf.sas.pal.muser.ui.views.ThemedStatusBarView
         android:id="@+id/statusBarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content">
 
         <!-- Regular Toolbar steals touch events, but we need the events to be passed to our peek view -->
-        <com.simplecity.amp_library.ui.views.NonClickableToolbar
+        <edu.usf.sas.pal.muser.ui.views.NonClickableToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
@@ -54,7 +54,7 @@
                     android:textSize="12sp"
                     tools:text="Naysayer - Kill Stuff"/>
             </LinearLayout>
-        </com.simplecity.amp_library.ui.views.NonClickableToolbar>
+        </edu.usf.sas.pal.muser.ui.views.NonClickableToolbar>
 
         <include
             android:id="@+id/contextualToolbar"
@@ -62,7 +62,7 @@
 
     </FrameLayout>
 
-    <com.simplecity.amp_library.ui.views.AestheticFastScrollRecyclerView
+    <edu.usf.sas.pal.muser.ui.views.AestheticFastScrollRecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

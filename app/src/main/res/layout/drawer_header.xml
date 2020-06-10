@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <com.simplecity.amp_library.ui.views.CircleImageView
+                <edu.usf.sas.pal.muser.ui.views.CircleImageView
                     android:id="@+id/artist_image"
                     android:layout_width="64dp"
                     android:layout_height="64dp"

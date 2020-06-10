@@ -5,7 +5,7 @@
     android:layout_height="48dp"
     android:orientation="vertical">
 
-    <com.simplecity.amp_library.ui.views.BreadcrumbView
+    <edu.usf.sas.pal.muser.ui.views.BreadcrumbView
         android:id="@+id/breadcrumbs"
         android:layout_width="match_parent"
         android:layout_height="48dp"

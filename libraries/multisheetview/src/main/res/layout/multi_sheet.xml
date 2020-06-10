@@ -43,7 +43,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 app:behavior_peekHeight="@dimen/bottom_sheet_peek_2_height"
-                app:layout_behavior="com.simplecity.multisheetview.ui.behavior.CustomBottomSheetBehavior">
+                app:layout_behavior="com.simplecity.multisheetview.edu.usf.sas.simplecity.multisheetview.ui.behavior.CustomBottomSheetBehavior">
 
                 <FrameLayout
                     android:id="@+id/sheet2Container"

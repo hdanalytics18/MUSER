@@ -6,7 +6,7 @@
     <item
         android:id="@+id/action_equalizer"
         android:title="@string/equalizer"
-        app:actionViewClass="com.afollestad.aesthetic.AestheticSwitchCompat"
+        app:actionViewClass="edu.usf.sas.afollestad.aesthetic.AestheticSwitchCompat"
         app:showAsAction="ifRoom"/>
 
     <item

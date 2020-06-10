@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.simplecity.amp_library.ui.views.ThemedStatusBarView
+        <edu.usf.sas.pal.muser.ui.views.ThemedStatusBarView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"/>
@@ -33,7 +33,7 @@
 
         </FrameLayout>
 
-        <com.simplecity.amp_library.ui.views.AestheticFastScrollRecyclerView
+        <edu.usf.sas.pal.muser.ui.views.AestheticFastScrollRecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

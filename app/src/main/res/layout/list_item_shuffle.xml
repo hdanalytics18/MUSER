@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:padding="8dp">
 
-        <com.simplecity.amp_library.ui.views.AestheticTintedImageView
+        <edu.usf.sas.pal.muser.ui.views.AestheticTintedImageView
             android:id="@+id/icon"
             android:layout_width="44dp"
             android:layout_height="44dp"

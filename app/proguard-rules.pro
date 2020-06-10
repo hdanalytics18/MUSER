@@ -23,13 +23,13 @@
 -keep class !android.support.v7.internal.view.menu.**,android.support.** {*;}
 
 # Custom Switch, referenced via menu action view class
--keep class com.simplecity.amp_library.ui.views.CustomSwitch { *; }
+-keep class edu.usf.sas.pal.muser.ui.views.CustomSwitch { *; }
 
 # Another Switch, referenced via menu action view class
--keep class com.afollestad.aesthetic.AestheticSwitchCompat { *; }
+-keep class edu.usf.sas.afollestad.aesthetic.AestheticSwitchCompat { *; }
 
 # ChromeCast options provider, only referenced via manifest.
--keep class com.simplecity.amp_library.cast.CastOptionsProvider { *; }
+-keep class edu.usf.sas.pal.muser.cast.CastOptionsProvider { *; }
 
 # Glide
 -keep public class * implements com.bumptech.glide.module.GlideModule
@@ -38,7 +38,7 @@
   **[] $VALUES;
   public *;
 }
--keepnames class com.simplecity.amp_library.glide.utils.CustomGlideModule
+-keepnames class edu.usf.sas.pal.muser.glide.utils.CustomGlideModule
 -keep public class * implements com.bumptech.glide.module.GlideModule
 
 # JAudioTagger
@@ -76,8 +76,8 @@
 -keep class sun.misc.Unsafe { *; }
 #-keep class com.google.gson.stream.** { *; }
 # Application classes that will be serialized/deserialized over Gson
--keep class com.simplecity.amp_library.http.itunes.** { *; }
--keep class com.simplecity.amp_library.http.lastfm.** { *; }
+-keep class edu.usf.sas.pal.muser.http.itunes.** { *; }
+-keep class edu.usf.sas.pal.muser.http.lastfm.** { *; }
 # Prevent proguard from stripping interface information from TypeAdapterFactory,
 # JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
 -keep class * implements com.google.gson.TypeAdapterFactory
@@ -112,5 +112,5 @@
 -keep class com.afollestad.materialdialogs.internal.** { *; }
 
 # Custom Cast Media Button, only referenced via menu
--keep class com.simplecity.amp_library.ui.views.CustomMediaRouteActionProvider.CustomMediaRouteButton { *; }
--keep class com.simplecity.amp_library.ui.views.CustomMediaRouteActionProvider { *; }
+-keep class edu.usf.sas.pal.muser.ui.views.CustomMediaRouteActionProvider.CustomMediaRouteButton { *; }
+-keep class edu.usf.sas.pal.muser.ui.views.CustomMediaRouteActionProvider { *; }
