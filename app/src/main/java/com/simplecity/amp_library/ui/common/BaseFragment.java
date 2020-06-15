@@ -111,8 +111,8 @@ public abstract class BaseFragment extends BaseController {
     public void onDestroy() {
 
         super.onDestroy();
-        RefWatcher refWatcher = ((ShuttleApplication) getContext().getApplicationContext()).getRefWatcher();
-        refWatcher.watch(this);
+//        RefWatcher refWatcher = ((ShuttleApplication) getContext().getApplicationContext()).getRefWatcher();
+//        refWatcher.watch(this);
     }
 
     public MediaManager getMediaManager() {

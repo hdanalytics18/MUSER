@@ -95,12 +95,12 @@ public class ShuttleApplication extends DaggerApplication {
         DaggerAppComponent.builder()
                 .create(this)
                 .inject(this);
-
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
+//
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            // This process is dedicated to LeakCanary for heap analysis.
+//            // You should not init your app in this process.
+//            return;
+//        }
 
         // Todo: Remove for production builds. Useful for tracking down crashes in beta.
         RxDogTag.install();
@@ -109,7 +109,7 @@ public class ShuttleApplication extends DaggerApplication {
             // enableStrictMode();
         }
 
-        refWatcher = LeakCanary.install(this);
+        //refWatcher = LeakCanary.install(this);
         // workaround to fix InputMethodManager leak as suggested by LeakCanary lib
         InputMethodManagerLeaks.fixFocusedViewLeak(this);
 
