@@ -2,6 +2,7 @@ package com.simplecity.amp_library.ui.settings;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -98,6 +99,7 @@ public class SettingsParentFragment extends BaseNavigationController implements
 
         toolbar.setTitle(titleResId);
         toolbar.setNavigationOnClickListener(v -> getActivity().onBackPressed());
+        toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
 
         return rootView;
     }

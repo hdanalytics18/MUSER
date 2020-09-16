@@ -88,14 +88,9 @@ public class MainActivity extends BaseActivity implements
 
         setContentView(R.layout.activity_main);
 
-        if(Aesthetic.isFirstTime(this))
-            Aesthetic.get(this)
-                    .activityTheme(R.style.AppTheme_Light)
-                    .isDark(false)
-                    .colorPrimaryRes(R.color.colorPrimary)
-                    .colorAccentRes(R.color.colorAccent)
-                    .colorStatusBarAuto()
-                    .apply();
+        // If we haven't set any defaults, do that now
+
+
 
         Permiso.getInstance().setActivity(this);
 

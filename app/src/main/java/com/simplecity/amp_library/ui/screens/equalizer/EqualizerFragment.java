@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.media.audiofx.AudioEffect;
 import android.os.Build;
 import android.os.Bundle;
@@ -197,6 +198,8 @@ public class EqualizerFragment extends BaseFragment implements
         toolbar.inflateMenu(R.menu.menu_equalizer);
         toolbar.setNavigationOnClickListener(v -> getNavigationController().popViewController());
         toolbar.setOnMenuItemClickListener(this);
+        toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+
 
         MenuItem item = toolbar.getMenu().findItem(R.id.action_equalizer);
         SwitchCompat switchItem = (SwitchCompat) item.getActionView();

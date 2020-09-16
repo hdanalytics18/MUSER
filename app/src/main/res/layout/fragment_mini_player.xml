@@ -30,7 +30,6 @@
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:lines="1"
-        android:tag=":aesthetic_ignore"
         android:textColor="?android:textColorSecondary"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"

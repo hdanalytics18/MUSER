@@ -53,7 +53,7 @@
                     android:transitionName="toolbar"
                     app:layout_collapseMode="none"
                     android:tag=":aesthetic_ignore"
-
+                    app:titleTextColor="@color/white"
                     app:title="@string/library_title"/>
 
                 <include

@@ -21,10 +21,14 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
-
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
         <item name="list_selector">@drawable/list_selector_light</item>
         <item name="listDividerColor">@color/list_divider_light</item>
         <item name="circular_ripple">@drawable/ripple_circular_light</item>
+    </style>
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">#FFFFFF</item>
     </style>
 
     <style name="CarTheme" parent="AppTheme">
