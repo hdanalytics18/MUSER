@@ -2,6 +2,8 @@ package com.simplecity.amp_library.ui.screens.main;
 
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -22,6 +24,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -187,6 +191,13 @@ public class LibraryController extends BaseFragment implements
         super.onCreateOptionsMenu(menu, inflater);
 
         inflater.inflate(R.menu.menu_library, menu);
+        for(int i = 0; i < menu.size(); i++){
+            Drawable drawable = menu.getItem(i).getIcon();
+            if(drawable != null) {
+                drawable.mutate();
+                drawable.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+            }
+        }
 
         if (CastManager.isCastAvailable(getContext(), settingsManager)) {
             MenuItem menuItem = CastButtonFactory.setUpMediaRouteButton(getContext(), menu, R.id.media_route_menu_item);
@@ -234,7 +245,6 @@ public class LibraryController extends BaseFragment implements
         pager.setAdapter(pagerAdapter);
         pager.setOffscreenPageLimit(pagerAdapter.getCount() - 1);
         pager.setCurrentItem(currentPage);
-
         slidingTabLayout.setupWithViewPager(pager);
 
         pager.postDelayed(() -> {

@@ -43,6 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     app:tabIndicatorHeight="3dp"
+                    app:tabTextColor="@color/colorAccent"
                     android:tag=":aesthetic_ignore"
                     app:tabMode="scrollable"/>
 
