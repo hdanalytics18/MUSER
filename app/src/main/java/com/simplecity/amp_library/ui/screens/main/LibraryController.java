@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -29,6 +30,8 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+
+import com.afollestad.aesthetic.ActiveInactiveColors;
 import com.afollestad.aesthetic.Aesthetic;
 import com.afollestad.aesthetic.ViewBackgroundAction;
 import com.annimon.stream.Stream;
@@ -64,6 +67,7 @@ import com.simplecity.amp_library.utils.SettingsManager;
 import com.simplecity.amp_library.utils.ShuttleUtils;
 import com.simplecity.multisheetview.ui.view.MultiSheetView;
 import dagger.android.support.AndroidSupportInjection;
+import io.reactivex.Observable;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import java.util.ArrayList;
@@ -74,6 +78,7 @@ import test.com.androidnavigation.fragment.FragmentInfo;
 
 import static com.afollestad.aesthetic.Rx.distinctToMainThread;
 import static com.afollestad.aesthetic.Rx.onErrorLogAndRethrow;
+import static com.afollestad.aesthetic.Util.adjustAlpha;
 
 public class LibraryController extends BaseFragment implements
         AlbumArtistListFragment.AlbumArtistClickListener,
@@ -149,6 +154,10 @@ public class LibraryController extends BaseFragment implements
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
         setupViewPager();
+        Handler handler = new Handler();
+        handler.postDelayed(() -> slidingTabLayout.setTabTextColors(
+                getResources().getColor(R.color.colorAccent),
+                getResources().getColor(R.color.colorAccent)), 600);
 
         return rootView;
     }

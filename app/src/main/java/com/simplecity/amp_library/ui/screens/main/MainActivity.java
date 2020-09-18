@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -291,6 +292,8 @@ public class MainActivity extends BaseActivity implements
                 super.onDrawerSlide(drawerView, 0);
             }
         };
+        new Handler().postDelayed(() ->toggle.getDrawerArrowDrawable()
+                        .setColor(getResources().getColor(R.color.colorAccent)), 600);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
     }
