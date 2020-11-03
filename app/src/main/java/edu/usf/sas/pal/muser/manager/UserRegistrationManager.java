@@ -120,7 +120,7 @@ public class UserRegistrationManager {
 
     private String getHtmlConsentDocument() {
         InputStream inputStream = mApplicationContext.getResources().
-                openRawResource(R.raw.travel_behavior_informed_consent);
+                openRawResource(R.raw.muser_informed_consent);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
         byte[] buf = new byte[1024];
