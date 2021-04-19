@@ -10,6 +10,10 @@ An Android app used in USF research on music therapy. Based on the open-source [
 
 If you'd like to build the project yourself, see our [build documentation](BUILD.md).
 
+#### Data
+
+See the type of data MUSER collects in the [data documentation](DATA.md).
+
 #### License
 
 MUSER is released under the GNU General Public License v3.0 (GPLv3), which can be found here: [License](LICENSE.md). It's based on the the open-source [Shuttle](https://github.com/timusus/Shuttle) app, which is also licensed under GPLv3.
