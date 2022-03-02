@@ -6,6 +6,11 @@
 
 An Android app used in USF research on music therapy. Based on the open-source [Shuttle](https://github.com/timusus/Shuttle) app.
 
+### Download
+
+MUSER is available in early access on [Google Play](https://play.google.com/store/apps/details?id=edu.usf.sas.pal.muser), currently by invite-only.
+
+
 #### Build
 
 If you'd like to build the project yourself, see our [build documentation](BUILD.md).
